@@ -1,11 +1,11 @@
 function initialize() {
   var angleInput = document.getElementById(
-    "angle");
+    "quantity");
   angleInput.addEventListener("blur",
     validateAngle);
 
   var velocityInput = document.getElementById(
-    "velocity");
+    "quantity");
   velocityInput.addEventListener("blur",
     validateVelocity);
 }

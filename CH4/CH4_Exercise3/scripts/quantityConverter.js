@@ -1,12 +1,4 @@
 function setup() {
-  var gallonsInput=document.getElementById(
-    "gallons");
-  gallonsInput.addEventListener("blur", validateGallons);
-
-  var litresInput=document.getElementById(
-    "litres");
-  litresInput.addEventListener("blur", validateLitres);
-
   document.getElementById("gallons").onclick =
     function () {
       setUnits("Litres");
@@ -15,28 +7,6 @@ function setup() {
     function () {
       setUnits("Gallons");
     };
-}
-
-function validateGallons() 
-{
-  var gallonsInput=document.getElementById("gallons");
-
-  if (gallonsInput.value>1000)
-  {
-    alert('Gallons value must be less than 1000')
-    gallonsInput.value = "";
-  }
-}
-
-function validateLitres() 
-{
-  var litresInput=document.getElementById("litres");
-
-  if (litresInput.value>4000)
-  {
-    alert('Litres value must be less than 4000')
-    litresInput.value = "";
-  }
 }
 
 function setUnits(unit) {

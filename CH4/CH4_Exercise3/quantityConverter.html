@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!---So my code for CH4 Exercise 2 technically meets the requirments, but it looks a little funny due to the fact that the 
-  converter aspect of the app has been preserved. I did the conversion portion with a "radio" input type. In order for me to
-  get the validation function to work I needed integers coming out of my inputs. I looked up how to convert radio inputs to integers 
-  but it looks too confusing and I am already taking forever to get these assignments done. Hopefully even though it looks a little weird
-  this demonstrates that I understand how to use the validation function.
--->
 <html>
 
 <head>
@@ -29,10 +23,10 @@
       </div>
       <fieldset data-role="controlgroup">
         <legend>Convert to:</legend>
-        <input type="number" name="units" id="gallons" value="gallons"
+        <input type="radio" name="units" id="gallons" value="gallons"
         onclick="setUnits('Gallons')">
         <label for="gallons">Gallons</label>
-        <input type="number" name="units" id="litres" value="litres"
+        <input type="radio" name="units" id="litres" value="litres"
         checked="checked" onclick="setUnits('Litres')">
         <label for="litres">Litres</label>
       </fieldset>
