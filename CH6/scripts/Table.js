@@ -104,7 +104,7 @@ function loadUserInformation() {
       "<br>Years of Operation: " + age +
       "<br>Plant ID Number: " + user.LastName +
       "<br>New Password : " + user.NewPassword);
-      //"<br>Cancer Type: " + user.CancerType +//
+      //"<br>Cancer Type: " + user.CancerType +// 
       //"<br>Cancer Stage: " + user.CancerStage +//
       //"<br>TSH Range: " + user.TSHRange); //
     $("#divUserSection").append(
@@ -117,8 +117,8 @@ function loadUserInformation() {
 function clearRecordForm() {
   $('#datExamDate').val("");
   $('#txtTSH').val("");
-  $('#txtThyroglobulin').val("");
-  $('#txtSynthroidDose').val("");
+  //$('#txtThyroglobulin').val(""); // Nick_change
+  //$('#txtSynthroidDose').val(""); // Nick_change
   return true;
 }
 
@@ -208,8 +208,8 @@ function showRecordForm(index) {
     var rec = tbRecords[index];
     $('#datExamDate').val(rec.Date);
     $('#txtTSH').val(rec.TSH);
-    $('#txtThyroglobulin').val(rec.Tg);
-    $('#txtSynthroidDose').val(rec.SynthroidDose);
+    //$('#txtThyroglobulin').val(rec.Tg); // Nick_change
+    //$('#txtSynthroidDose').val(rec.SynthroidDose);// Nick_change
   } catch (e) {
     /* Google browsers use different error 
      * constant
@@ -276,9 +276,9 @@ function addRecord() {
     var record = {
       "Date": $('#datExamDate').val(),
       "TSH": $('#txtTSH').val(),
-      "Tg": $('#txtThyroglobulin').val(),
-      "SynthroidDose": $('#txtSynthroidDose')
-        .val()
+      //"Tg": $('#txtThyroglobulin').val(),// Nick_change
+      //"SynthroidDose": $('#txtSynthroidDose') Nick_change
+      //  .val() // Nick_change
     };
 
     try {
@@ -361,9 +361,9 @@ function editRecord(index) {
       tbRecords[index] = {
         "Date": $('#datExamDate').val(),
         "TSH": $('#txtTSH').val(),
-        "Tg": $('#txtThyroglobulin').val(),
-        "SynthroidDose": $(
-          '#txtSynthroidDose').val()
+       // "Tg": $('#txtThyroglobulin').val(), // Nick_change
+       // "SynthroidDose": $(// Nick_change
+        //  '#txtSynthroidDose').val() // Nick_change
       }; //Alter the selected item in the array
       tbRecords.sort(compareDates);
       localStorage.setItem("tbRecords", JSON.stringify(
