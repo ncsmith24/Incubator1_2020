@@ -96,19 +96,19 @@
       <form id="frmUserForm" action="">
         <div data-role="fieldcontain">
           <label for="txtFirstName">Plant Name: </label>
-          <input type="text" placeholder="First Name" name="txtFirstName"
+          <input type="text" placeholder="Plant Name" name="txtFirstName"
           data-mini="false" id="txtFirstName" value=""
           required>
         </div>
         <div data-role="fieldcontain">
           <label for="txtLastName">Plant ID Number: </label>
-          <input type="text" placeholder="Last Name" name="txtLastName"
+          <input type="text" placeholder="Plant ID" name="txtLastName"
           data-mini="false" id="txtLastName" value=""
           required>
         </div>
         <div data-role="fieldcontain">
           <label for="datBirthdate">Installation Date: </label>
-          <input type="date" name="datBirthdate" data-mini="false"
+          <input type="date" name="Install Date" data-mini="false"
           id="datBirthdate" value="" required>
         </div>
         <div data-role="fieldcontain">
@@ -135,9 +135,9 @@
     <div data-role="content">
       <div data-role="controlgroup">
         <a href="#pageUserInfo" data-role="button"> Plant Info</a>
-        <a href="#pageRecords" data-role="button">Records</a>
-        <a href="#pageGraph" data-role="button">Graph</a>
-        <a href="#pageAdvice" data-role="button">Suggestions</a>
+        <a href="#pageRecords" data-role="button">Data Entry</a>
+    <!--     <a href="#pageGraph" data-role="button">Graph</a>
+        <a href="#pageAdvice" data-role="button">Suggestions</a> -->
       </div>
     </div>
   </div>
@@ -149,11 +149,14 @@
       data-iconpos="left" data-inline="true">Menu</a>
       <a href="#pageAbout" data-role="button" data-icon="info"
       data-iconpos="right" data-inline="true">Info</a>
-      <h1>Records</h1>
+      <h1>Data Entry</h1>
     </div>
     <div data-role="content">
       <!-- User's Information Section -->
-
+      <div data-role="fieldcontain" id="divUserSection">
+      </div>
+      <h3 align="center">History</h3>
+      <div data-role="fieldcontain">
         <!-- Records Table -->
         <table id="tblRecords" class="ui-responsive table-stroke">
         </table>
@@ -185,12 +188,13 @@
             id="datExamDate" value="">
           </div>
           <div data-role="fieldcontain">
-            <label for="txtTSH"><abbr title="Thyroid-stimulating hormone">MgW (MegaWatt Hours): </abbr>
+            <label for="txtTSH"><abbr title="Thyroid-stimulating hormone">Power Consumed in MgW (MegaWatt Hours): </abbr>
             </label>
             <input type="number" step="0.01" placeholder="0" name="txtTSH"
             data-mini="false" id="txtThyroglobulin" value="">
           </div>
-<!--          <div data-role="fieldcontain">
+
+         <div data-role="fieldcontain">
             <label for="txtThyroglobulin">Thyroglobulin (µg/L)[Optional]: </label>
             <input type="number" step="0.01" placeholder="0" name="txtThyroglobulin"
             data-mini="false" id="txtThyroglobulin"
@@ -203,12 +207,12 @@
             data-mini="false" id="txtSynthroidDose"
             value="">
           </div>
-        -->
+
         </div>
         <input type="submit" id="btnSubmitRecord" value="">
       </form>
     </div>
-   <!-- <p>&nbsp;&nbsp;100 microgram = .0001 gram</p> -->
+    <p>&nbsp;&nbsp;100 microgram = .0001 gram</p>
   </div>
 
 
