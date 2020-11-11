@@ -30,24 +30,24 @@ function advicePage() {
 function drawAdviceCanvas(ctx, TSHLevel, TSH) {
   ctx.font = "22px Arial";
   ctx.fillStyle = "black";
-  ctx.fillText("Your current TSH is " + TSH +
+  ctx.fillText("Your current MGW usage is " + TSH +
     ".", 25, 320);
 
-  if (TSHLevel == "StageA") {
+  if (TSH >= 86) {
     ctx.fillText(
-      "Your target TSH range is: 0.01-0.1 mlU/L",
+      "Your target MGW range is: 85. Need Lower consumption.",
       25, 350);
     levelAwrite(ctx, TSH);
     levelAMeter(ctx, TSH);
-  } else if (TSHLevel == "StageB") {
+  } else if (TSH == 85) {
     ctx.fillText(
-      "Your target TSH range is: 0.1-0.5 mlU/L",
+      "Your target MGW range is: 85. Target met.",
       25, 350);
     levelBwrite(ctx, TSH);
     levelBMeter(ctx, TSH);
-  } else if (TSHLevel == "StageC") {
+  } else if (TSH <= 84) {
     ctx.fillText(
-      "Your target TSH range is: 0.35-2.0 mlU/L",
+      "Your target MGW range is: 85.",
       25, 350);
     levelCwrite(ctx, TSH);
     levelCMeter(ctx, TSH);
@@ -89,7 +89,7 @@ function levelCwrite(ctx, TSH) {
   }
 }
 
-function writeAdvice(ctx, level) {
+/* function writeAdvice(ctx, level) {
   var adviceLine1 = "";
   var adviceLine2 = "";
 
@@ -109,9 +109,9 @@ function writeAdvice(ctx, level) {
     ".", 25, 380);
   ctx.fillText(adviceLine1, 25, 410);
   ctx.fillText(adviceLine2, 25, 440);
-}
+} */
 
-function levelAMeter(ctx, TSH) {
+/* function levelAMeter(ctx, TSH) {
   if (TSH <= 3) {
     var cg = new RGraph.CornerGauge(
         "AdviceCanvas", 0, 3, TSH)
@@ -131,7 +131,7 @@ function levelAMeter(ctx, TSH) {
       ]);
   }
   drawMeter(cg);
-}
+} */
 
 function levelBMeter(ctx, TSH) {
   if (TSH <= 3) {
