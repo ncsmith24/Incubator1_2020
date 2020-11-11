@@ -165,7 +165,7 @@ function listRecords() {
       "<thead>" +
       "   <tr>" +
       "     <th>Date</th>" +
-      "     <th><abbr title='MegaWatt Hours'>MGW</abbr></th>" +
+      "     <th><abbr title='Mega-Watt Hours'>MGW</abbr></th>" +
       //"     <th><abbr title='Thyroglobulin'>Tg(ug/L)</abbr></th>" +
       //"     <th>Synthroid Dose(ug)</th>" +
      // "     <th>Edit / Delete</th>" +
