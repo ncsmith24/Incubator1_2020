@@ -92,10 +92,10 @@ function drawLines(TSHarr, tshUpper, tshLower,
     .Set("gutter.left", 40)
     .Set("tickmarks", "filledcircle")
     .Set("ticksize", 5)
-    .Set("chart.labels.ingraph", [, , ["TSH",
+    .Set("chart.labels.ingraph", [, , ["MGW",
       "blue", "yellow", 1, 80
     ], , ])
-    .Set("chart.title", "TSH")
+    .Set("chart.title", "MGW")
     .Draw();
 }
 
